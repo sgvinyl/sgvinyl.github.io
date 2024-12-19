@@ -20,10 +20,27 @@ layout: base
       {%- if page.author -%}
         • {% for author in page.author %}
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+            <span class="p-author h-card" itemprop="name">
+              {{ author }}
+            </span>
+          </span>
             {%- if forloop.last == false %}, {% endif -%}
         {% endfor %}
-      {%- endif -%}</p>
+      {%- endif -%}
+      • In <a class='category-link' href="{{ '/categories' | relative_url }}#{{ page.category }}">
+        {{ page.category }}
+      </a>
+      {% if page.tags.size > 0 %}
+        • Tags:
+        {% for tag in page.tags %}
+          <a class='tag-link' href="{{ '/tags' | relative_url }}#{{ tag }}">
+            {{ tag }}
+          </a>
+            {%- if forloop.last == false %}, {% endif -%}
+        {% endfor %}
+      {% endif %}
+      • {{ page.content | number_of_words | divided_by: 180 }} min read
+    </p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
@@ -33,6 +50,23 @@ layout: base
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
   {%- endif -%}
+
+  <div id='discourse-comments'></div>
+  <meta name='discourse-username' content='NateDhaliwal'>
+
+  <script type="text/javascript">
+    DiscourseEmbed = {
+      discourseUrl: 'https://discourse.sgvinyl.xyz',
+      discourseEmbedUrl: '{{ post.url | absolute_url }}',
+     // className: 'discourseMyBlogComments',
+    };
+
+    (function() {
+      var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+      d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+    })();
+  </script>
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
