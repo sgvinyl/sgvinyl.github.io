@@ -81,7 +81,13 @@ figcaption {
   font-size: $small-font-size;
 }
 
+.page-item.previous {
+  float: left;
+}
 
+.page-item.next {
+  float: right;
+}
 
 /**
  * Lists
