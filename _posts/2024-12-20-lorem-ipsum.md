@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Lorem ipsum
+category: Uncategorized
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et libero libero. Mauris maximus, ante eget cursus dapibus, purus ligula luctus augue, sit amet viverra ligula dui et ex. Nam aliquet enim non rhoncus malesuada. Curabitur volutpat ante diam, eu efficitur tortor venenatis a. Suspendisse venenatis quis ipsum eget aliquam. Sed maximus nisi sit amet nulla dictum mollis. Vestibulum eget leo eu libero elementum ornare. Phasellus non lectus semper, vulputate velit a, blandit lectus. Phasellus suscipit ornare pharetra. Suspendisse mattis sodales imperdiet.
