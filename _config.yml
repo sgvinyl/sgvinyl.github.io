@@ -12,7 +12,6 @@ description: >
 # If you clone the Minima repo and build locally, use this setting.
 theme: minima
 
-pagination: true
 
 # As of November 2023, GitHub Pages still uses Minima 2.5.1 (https://pages.github.com/versions/). 
 # If you want to use the latest Minima version on GitHub Pages, use the following setting and 
@@ -22,6 +21,7 @@ pagination: true
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-paginate
 
 # Theme-specific settings
 
