@@ -3,7 +3,7 @@ layout: page
 title: All tags
 ---
 
-{% if site.tags %}
+{% if site.tags[0][0] != "" %}
   {% for tag in site.tags %}
     <h3 id='{{ tag[0] }}'><i class="fa-solid fa-tag"></i> {{ tag[0] }}</h3>
     <ul>
