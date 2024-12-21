@@ -72,14 +72,14 @@ layout: base
   
   <div id='discourse-comments'></div>
   <meta name='discourse-username' content='system'>
-
+  
   <script type="text/javascript">
     DiscourseEmbed = {
-      discourseUrl: 'https://discourse.sgvinyl.xyz',
-      discourseEmbedUrl: `${window.location.href}`,
-     // className: 'discourseMyBlogComments',
+      discourseUrl: 'https://discourse.sgvinyl.xyz/',
+      discourseEmbedUrl: '{{ page.url | absolute_url }}',
+      // className: 'CLASS_NAME',
     };
-
+  
     (function() {
       var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
       d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
