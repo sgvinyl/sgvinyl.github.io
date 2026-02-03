@@ -70,13 +70,30 @@ layout: base
     {% endif %}
   </ul>
   
-  <div id='discourse-comments'></div>
+  <!-- <div id='discourse-comments'></div>
   <meta name='discourse-username' content='SGvinyl'>
   
   <script type="text/javascript">
     DiscourseEmbed = {
       discourseUrl: 'https://discourse.sgvinyl.xyz/',
       discourseEmbedUrl: `${window.location.href}`,
+      // className: 'CLASS_NAME',
+    };
+  
+    (function() {
+      var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+      d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+    })();
+  </script> -->
+
+  <div id='discourse-comments'></div>
+  <meta name='discourse-username' content='SGVinyl'>
+  
+  <script type="text/javascript">
+    DiscourseEmbed = {
+      discourseUrl: 'https://discourse.example.com/',
+      discourseEmbedUrl: '${window.location.href}',
       // className: 'CLASS_NAME',
     };
   
